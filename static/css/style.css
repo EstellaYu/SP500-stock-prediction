@@ -29,6 +29,7 @@
         margin-left: 30%;
         margin-top: 50px;
         text-anchor: middle;
+        z-index: 5;
     }
 
 
@@ -70,7 +71,7 @@
 
     #section2 .intro{
         position: relative;
-        top: -130px
+        top: -30px
     }
     #section2 h1{
         /* text-shadow: 10px 10px 100px gray; */
@@ -91,7 +92,8 @@
 }
 .card{
     box-shadow:1px 5px 10px gray;
-    stroke: white
+    stroke: white;
+    margin-top: 25px;
 }
 .card-img-overlay{
     position: absolute;
@@ -126,8 +128,8 @@
 /* Tooltip */
 .tooltip{
     position: absolute;
-    width: 80px;
-    height: 110px;
+    width: 100px;
+    height: 120px;
     padding: 5px;
     z-index: 5;
     font: 12px sans-serif;
@@ -236,6 +238,69 @@ button{
 #fig1 svg{
     margin-top: 50px
 }
+
+/* FIG4 */
+#fig4{
+    position: absolute;
+    width: 95%;
+    margin-left: 100px;
+    margin-top: 150px;
+    margin-right: 100px;
+}
+#fig4 svg{
+    margin-top: -90px
+}
+
+#selectTicker{
+    width: 15%;
+    z-index: 5;
+}
+#inputTicker{
+    position: relative;
+    height: 20px;
+    text-align: center;
+    font-size: 10pt;
+    z-index: 5;
+}
+#submitTickerButton {
+    position: relative;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 10pt;
+    background-color: darkseagreen;
+    z-index: 5;
+}
+
+#stockinfo{
+    position: relative;
+    top: -120px;
+    left: 20%;
+    width: 70%;
+    text-align: center;
+}
+#CompanyName{
+    position: relative;
+    left:-10%;
+    text-align: center;
+    font-size: 15pt;
+}
+
+#infoTable{
+    position: relative;
+    border: dimgray 1px solid;
+}
+#infoTable td{
+    border: dimgray 1px solid;
+}
+
+#GroupDescription{
+    display: none;
+}
+#MLindex:hover #GroupDescription{
+    display: block;
+}
+
 /* Home button */
 #homeButton{
     position: absolute;
@@ -247,6 +312,7 @@ button{
     font-weight: bold;
     text-align: center;
     font-size: 10pt;
+    z-index: 5;
 }
 #visualButton{
     position: absolute;
@@ -258,6 +324,7 @@ button{
     font-weight: bold;
     text-align: center;
     font-size: 10pt;
+    z-index: 5;
 }
 #homeButton:hover, #visualButton:hover{
     background-color: green;
@@ -287,3 +354,160 @@ button{
     top:-10px;
     left:0;
 } */
+
+/* loader */
+.loader-wraper{
+    position: absolute;
+    width : 100%;
+    height: 70%;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    align-items: center; 
+    z-index: 1;
+}
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 7px solid mediumseagreen;
+    animation: loader 2s infinite ease;
+  }
+
+.loader-word{
+    display: flex;
+    position: absolute;
+    width : 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center; 
+    top: 25%;
+    font-size: 30px;
+    color: gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 2;
+}
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: mediumseagreen;;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  
+  @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
+
+
+  /* Carousel */
+  .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    background-color:blue;
+}
+
+
+/* FAQ */
+/* // TAB CONTENT */
+.tab-content {
+    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+    text-decoration: none;
+  }
+    
+.tab-content  .card {
+        border-radius: 0;
+}
+    
+.tab-content  .card-header {
+    padding: 15px 10px;
+    border-radius: 10;
+    background-color: #f6f6f6;}
+        
+.tab-content h5 {margin: 0;}
+            
+.tab-content  button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-weight: 700;
+    color: rgba(0,0,0,.87);
+    text-align:center;
+    white-space: normal;}
+    
+    .tab-content  .card-body p{
+            color: #616161;        
+}
+
+/* // BORDER FIX */
+.accordion .card {
+   border-top: 0;
+}
+
+.collapse .card-body{
+border-bottom: 1px solid rgba(0,0,0,.125);
+}
