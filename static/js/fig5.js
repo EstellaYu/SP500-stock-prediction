@@ -10,7 +10,7 @@ function init() {
 };
 
 function createCarousels(){
-  for (var i = 1; i<=10; i++){
+  for (var i = 1; i<=15; i++){
     if (i == 1){
       carousel_ind.append("li").attr("data-target", '#myCarousel')
                   .attr("data-slide-to",`${i-1}`)
@@ -23,10 +23,10 @@ function createCarousels(){
                   .attr("data-slide-to",`${i-1}`)
       var img_container = carousel_div.append("div").attr("class","item").attr("margin", "auto")
     }
-    path = `../static/imgs/MLPorfolioIndex/Brad_slide-show-${i}.jpg`
+    path = `../static/imgs/MLPorfolioIndex/new_slide${i}.jpg`
     img_container.append("img")
                 .attr("src", path)
-                .attr("width", '75%')
+                .attr("width", '80%')
                 .classed("img-responsive center-block", true)
 
   }
