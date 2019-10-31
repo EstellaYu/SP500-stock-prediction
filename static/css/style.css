@@ -359,7 +359,7 @@ button{
 .loader-wraper{
     position: absolute;
     width : 100%;
-    height: 70%;
+    height: 100%;
     top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -453,8 +453,8 @@ button{
   /* Carousel */
   .carousel-indicators li {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin: 10px;
     text-indent: 0;
     cursor: pointer;
@@ -464,8 +464,8 @@ button{
     box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
 }
 .carousel-indicators .active {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin: 10px;
     background-color:blue;
 }
